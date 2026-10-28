@@ -36,7 +36,7 @@ jobs:
           cp dist/PeDitX-AI PeDitX-AI.AppDir/usr/bin/
           mkdir -p PeDitX-AI.AppDir/usr/share/icons/hicolor/256x256/apps
           cp assets/peditx-ai.png PeDitX-AI.AppDir/usr/share/icons/hicolor/256x256/apps/
-          cat > PeDitX-AI.AppDir/PeDitX-AI.desktop << 'DESKTOP_EOF'
+          cat > PeDitX-AI.AppDir/PeDitX-AI.desktop << 'EOF'
 [Desktop Entry]
 Type=Application
 Name=PeDitX-AI
@@ -44,7 +44,7 @@ Exec=PeDitX-AI
 Icon=peditx-ai
 Categories=Utility;
 Terminal=false
-DESKTOP_EOF
+EOF
           cp PeDitX-AI.AppDir/usr/share/icons/hicolor/256x256/apps/peditx-ai.png PeDitX-AI.AppDir/peditx-ai.png
           ./appimagetool PeDitX-AI.AppDir PeDitX-AI-x86_64.AppImage
       - name: Upload artifact
